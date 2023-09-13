@@ -1,0 +1,7 @@
+hp 4
+has_jetpack false
+energy 0
+number_of_asteroids 15
+hero_demage 20
+enemy_demage 1
+music on
