@@ -78,27 +78,27 @@ void MovingPlatform::collisions(Hero &hero, sf::Time &elapsed){
 
     if(Y.intersects(getGlobalBounds())){
 
-        if(hero.get_velocity_y() < 0){ //bohater porusza się w górę
+        if(hero.get_velocity_y() < 0){ //hero is moving up
 
-            if(velocity_y_ > 0){ // platforma porusza się w dół
+            if(velocity_y_ > 0){ // platform is moving down
 
                 hero.set_velocity_yy(velocity_y_);
                 hero.set_velocity_y(1);
             }
-            else{ // platforma porusza się w górę
+            else{ // platform is moving up
 
                 hero.set_velocity_y(1);
                 hero.set_velocity_yy(0);
             }
         }
-        else{ // bohater porusza się w dół
+        else{ // hero is moving down
 
-            if(velocity_y_ < 0){ // platforma porusza się w górę
+            if(velocity_y_ < 0){ // platform is moving up
 
                 hero.set_velocity_y(0);
                 hero.set_velocity_yy(velocity_y_);
             }
-            else{ // platforma porusza się w dół
+            else{ // platform is moving down
 
                 hero.set_velocity_y(0);
                 hero.set_velocity_yy(velocity_y_);
@@ -115,27 +115,27 @@ void MovingPlatform::collisions(Hero &hero, sf::Time &elapsed){
 
         if(X.intersects(getGlobalBounds())){
 
-            if(hero.get_velocity_x() > 0){ // bohater porusza się w prawo
+            if(hero.get_velocity_x() > 0){ // hero is moving right
 
-                if(velocity_x_ < 0){ // platforma porusza się w lewo
+                if(velocity_x_ < 0){ // platform is moving left
 
                     hero.set_velocity_x(0);
                     hero.set_velocity_xx(velocity_x_);
                 }
-                else{ //platforma porusza sie w prawo
+                else{ // platform is moving right
 
                     hero.set_velocity_x(0);
                     hero.set_velocity_xx(0);
                 }
             }
-            else{ //bohater porusza się w lewo
+            else{ // hero is moving left
 
-                if(velocity_x_ > 0){ // platforma porusza się w prawo
+                if(velocity_x_ > 0){ // platform is moving right
 
                     hero.set_velocity_x(0);
                     hero.set_velocity_xx(velocity_x_);
                 }
-                else{ // platforma porusza się w lewo
+                else{ // platform is moving left
 
                     hero.set_velocity_x(0);
                     hero.set_velocity_xx(velocity_x_);
